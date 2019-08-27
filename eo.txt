@@ -1,0 +1,25 @@
+
+eĥoŝanĝo ĉiuĵaŭde
+
+eĤoŜanĜo ĈiuĴaŬde
+
+EĤOŜANĜO ĈIUĴAŬDE
+
+     C-S-u <hex>  emacs rfc1345
+ĉ Ĉ  109 108      &c> &C>
+ĝ Ĝ  11d 11c      &g> &G>
+ĥ Ĥ  125 124      &h> &H>
+ĵ Ĵ  135 134      &j> &J>
+ŝ Ŝ  15d 15c      &s> &S>
+ŭ Ŭ  16d 16c      &u( &U(
+
+ä Ä  e4 c4        &a: &A:
+ë Ë  eb cb        &e: &E:
+ï Ï  ef cf        &i: &I:
+ö Ö  f6 d6        &o: &O:
+ü Ü  fc dc        &u: &U:
+
+ß    df           &ss
+
+¿    bf           &?I
+

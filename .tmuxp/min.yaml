@@ -1,0 +1,11 @@
+session_name: min
+windows:
+  - start_directory: /home/allan
+    window_name: work
+
+  - start_directory: /home/allan/src/zirpu
+    window_name: kata
+
+  - start_directory: /home/allan/org
+    window_name: org
+    window_index: 9

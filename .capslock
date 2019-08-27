@@ -1,0 +1,5 @@
+
+! xmodmap .capslock
+remove Lock = Caps_Lock
+keysym Caps_Lock = 0x0000
+
