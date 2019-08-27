@@ -76,3 +76,4 @@ projects/
 .subversion
 .emacs.d/bookmarks
 .lesshst
+.bash_it
