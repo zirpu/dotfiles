@@ -94,7 +94,8 @@ esac
 export BASH_IT="/home/allan/.bash_it"
 
 # Lock and Load a custom theme file.
-export BASH_IT_THEME="$HOME/misc/pure.theme.bash"
+export BASH_IT_THEME="zirpu"
+#export BASH_IT_THEME="$HOME/misc/pure.theme.bash"
 
 # Your place for hosting Git repos. I use this for private repos.
 #export GIT_HOSTING='git@git.domain.com'
