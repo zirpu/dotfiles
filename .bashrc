@@ -20,7 +20,8 @@ set -o ignoreeof
 # set a fancy prompt
 case "$TERM" in
     *)
-	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[$(~/bin/bash.dectime.prompt.sh)]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[\t]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[$(~/bin/bash.dectime.prompt.sh)]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	;;
 esac
 
