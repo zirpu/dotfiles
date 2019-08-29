@@ -78,3 +78,4 @@ projects/
 .lesshst
 .bash_it
 .gem
+.pam_environment
