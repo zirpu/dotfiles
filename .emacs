@@ -61,6 +61,9 @@
  '(org-todo-keywords
    (quote
     ((sequence "PROCESS" "NEXT" "TODO" "WAITING" "REVIEW" "DEFERRED" "CANCELED" "DONE"))))
+ '(package-selected-packages
+   (quote
+    (yaml-mode tabbar session pod-mode muttrc-mode mutt-alias markdown-mode magit initsplit htmlize graphviz-dot-mode folding eproject diminish csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode)))
  '(python-guess-indent t)
  '(python-indent-guess-indent-offset t)
  '(safe-local-variable-values
