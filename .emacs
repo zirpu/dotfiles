@@ -34,7 +34,7 @@
 (setenv "LC_COLLATE" "C")
 
 (add-to-list 'default-frame-alist
-             '(font . "DejaVu Sans Mono-18"))
+             '(font . "DejaVu Sans Mono-20"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
