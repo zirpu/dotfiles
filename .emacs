@@ -28,6 +28,8 @@
 (setq kept-old-versions 40)
 (setq kept-new-versions 40)
 
+(setq-default show-trailing-whitespace t)
+
 (global-set-key "\C-c#" 'comment-region)
 
 ;; for dired mode to list "correctly", or at least the way i'm habituated to.
