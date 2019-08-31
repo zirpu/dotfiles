@@ -61,6 +61,7 @@
       "* %?
   %i
 " :empty-lines-after 1))))
+ '(org-catch-invisible-edits (quote show-and-error))
  '(org-todo-keywords
    (quote
     ((sequence "PROCESS" "NEXT" "TODO" "WAITING" "REVIEW" "DEFERRED" "CANCELED" "DONE"))))
