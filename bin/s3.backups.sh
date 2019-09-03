@@ -16,7 +16,7 @@ fi
 
 # for S3 backups only backing up data dirs
 
-for d in Desktop Documents Music Pictures Videos
+for d in Desktop Documents Music Pictures Videos Downloads
 do
     aws s3 sync --acl private ${delete} ${d}/ s3://zirpus-backup/${d}/
 done
