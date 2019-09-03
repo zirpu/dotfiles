@@ -67,7 +67,29 @@
     ((sequence "PROCESS" "NEXT" "TODO" "WAITING" "REVIEW" "DEFERRED" "CANCELED" "DONE"))))
  '(package-selected-packages
    (quote
-    (hcl-mode erlang go-mode pyvenv python-test python-pytest python-info rust-mode yaml-mode tabbar session pod-mode muttrc-mode mutt-alias markdown-mode magit initsplit htmlize graphviz-dot-mode folding eproject diminish csv-mode browse-kill-ring boxquote bm bar-cursor apache-mode)))
+    (
+
+ apache-mode
+ browse-kill-ring
+ csv-mode
+ discover
+ erlang
+ folding
+ go-mode
+ graphviz-dot-mode
+ hcl-mode
+ initsplit
+ magit
+ markdown-mode
+ python-info
+ python-pytest
+ python-test
+ pyvenv
+ rust-mode
+ session
+ yaml-mode
+
+)))
  '(python-guess-indent t)
  '(python-indent-guess-indent-offset t)
  '(safe-local-variable-values
