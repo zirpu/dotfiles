@@ -6,6 +6,7 @@
 (load-library "allan-org-mode")
 (load-library "allan-mh-stuff")
 (load-library "allan-elpa")
+(load-library "allan-magit")
 
 ;; Visual feedback on selections
 (setq-default transient-mark-mode t)
