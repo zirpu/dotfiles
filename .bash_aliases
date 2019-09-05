@@ -14,6 +14,7 @@ alias wh=which
 
 alias d='dirs -v'
 alias p=pushd
+alias pp=popd
 
 alias grep='grep --color'
 
