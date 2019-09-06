@@ -83,3 +83,4 @@ z/
 .ipython
 .jupyter
 .texlive2018
+.emacs.d/.emacs.desktop
