@@ -3,7 +3,7 @@ windows:
   - start_directory: /home/allan
     window_name: work
 
-  - start_directory: /home/allan/src/zirpu
+  - start_directory: /home/allan/projects/zirpu
     window_name: kata
 
   - start_directory: /home/allan/org
