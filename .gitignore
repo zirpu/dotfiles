@@ -85,3 +85,4 @@ z/
 .texlive2018
 .emacs.d/.emacs.desktop
 .kivy
+Makefile
