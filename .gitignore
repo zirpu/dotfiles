@@ -21,6 +21,7 @@
 .cups
 .dbus
 .docker*
+.emacs.d/.emacs.desktop
 .emacs.d/bookmarks
 .emacs.d/info
 .emacs.d/transient
@@ -31,6 +32,9 @@
 .gnome2
 .gnupg
 .gtk*
+.ipython
+.jupyter
+.kivy
 .lesshst
 .local
 .mozilla/
@@ -47,6 +51,7 @@
 .steam*
 .subversion
 .sudo_as_admin_successful
+.texlive2018
 .vagrant.d/
 .vagrant/
 .vendetta
@@ -60,6 +65,7 @@
 Desktop
 Documents
 Downloads
+Makefile
 Monero
 Music
 Pictures
@@ -80,9 +86,3 @@ tmp
 work
 z.old/
 z/
-.ipython
-.jupyter
-.texlive2018
-.emacs.d/.emacs.desktop
-.kivy
-Makefile

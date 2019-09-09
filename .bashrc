@@ -3,15 +3,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines in the history. See bash(1) for more options
+# don't put duplicate lines in the history.
 export HISTCONTROL=ignoredups
-# ... and ignore same sucessive entries.
+# ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
 set -o ignoreeof
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -21,7 +19,6 @@ set -o ignoreeof
 case "$TERM" in
     *)
 	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[\t]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-	#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:[$(~/bin/bash.dectime.prompt.sh)]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	;;
 esac
 
@@ -65,14 +62,14 @@ function gclone2(){
 [ -e /etc/bash_completion.d/virtualenvwrapper ] && . /etc/bash_completion.d/virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 
-# bin.
-[ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
-#[ -d $HOME/.bin ] && PATH=$HOME/.bin:$PATH
+# # bin.
+# [ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
+# #[ -d $HOME/.bin ] && PATH=$HOME/.bin:$PATH
 
-[ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
+# [ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
 
 # common default paths
-PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
+#PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
 
 # goal: only source .kc on tmux windows.
 if [ -e $HOME/.ssh/.kc ]; then
