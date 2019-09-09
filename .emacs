@@ -82,7 +82,7 @@
      (py-indent-offset . 4)
      (config . utf-8)
      (encoding . utf-8))))
- '(save-place t nil (saveplace))
+ '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(show-paren-mode t nil (paren))
  '(size-indication-mode t)
