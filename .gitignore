@@ -87,3 +87,4 @@ work
 z.old/
 z/
 .emacs.d/places
+.terraform.d
