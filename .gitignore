@@ -89,3 +89,4 @@ z/
 .emacs.d/places
 .terraform.d
 .packer.d
+.hplip
