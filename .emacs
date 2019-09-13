@@ -53,6 +53,7 @@
  '(auto-compression-mode t nil (jka-compr))
  '(case-fold-search t)
  '(column-number-mode t)
+ '(confirm-kill-emacs (quote y-or-n-p))
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(dired-listing-switches "-l")
@@ -74,7 +75,6 @@
  '(package-selected-packages
    (quote
     (dockerfile-mode terraform-mode haskell-mode editorconfig toml-mode pipenv elpy cargo apache-mode browse-kill-ring csv-mode discover erlang folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
- '(python-guess-indent t)
  '(python-indent-guess-indent-offset t)
  '(safe-local-variable-values
    (quote
@@ -87,8 +87,7 @@
      (py-indent-offset . 4)
      (config . utf-8)
      (encoding . utf-8))))
- '(save-place t nil (saveplace))
- '(save-place-mode t)
+ '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t nil (paren))
  '(size-indication-mode t)
