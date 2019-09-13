@@ -8,6 +8,11 @@
 (load-library "allan-elpa")
 (load-library "allan-magit")
 
+;; (use-package elpy
+;;   :ensure t
+;;   :init
+;;   (elpy-enable))
+
 ;; Visual feedback on selections
 (setq-default transient-mark-mode t)
 ;; Always end a file with a newline
