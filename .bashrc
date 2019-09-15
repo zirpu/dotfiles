@@ -30,6 +30,11 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# NMH
+if [ -d /usr/bin/mh ]; then
+    export PATH=${PATH}:/usr/bin/mh
+fi
+
 ## functions
 snr(){
     _host=$1; shift
