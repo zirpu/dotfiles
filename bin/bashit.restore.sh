@@ -25,3 +25,6 @@ for c in awscli bash-it consul docker git go kubectl \
 do
     bash-it enable completion $c
 done
+
+bash-it reload
+
