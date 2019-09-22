@@ -68,13 +68,13 @@ function gclone2(){
 export WORKON_HOME=$HOME/.virtualenvs
 
 # # bin.
-# [ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
+[ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
 # #[ -d $HOME/.bin ] && PATH=$HOME/.bin:$PATH
 
-# [ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
+[ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
 
 # common default paths
-#PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
+PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
 
 # goal: only source .kc on tmux windows.
 if [ -e $HOME/.ssh/.kc ]; then
