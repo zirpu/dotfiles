@@ -92,3 +92,5 @@ z/
 .hplip
 .fetchmail.pid
 .mrtrust
+.minikube
+.kube
