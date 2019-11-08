@@ -95,3 +95,5 @@ z/
 .minikube
 .kube
 .ansible_galaxy
+.vscode
+.pylint.d
