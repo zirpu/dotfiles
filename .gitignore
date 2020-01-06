@@ -98,3 +98,4 @@ z/
 .vscode
 .pylint.d
 .purism
+.quarry
