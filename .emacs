@@ -7,6 +7,7 @@
 (load-library "allan-mh-stuff")
 (load-library "allan-elpa")
 (load-library "allan-magit")
+(load-library "fix-window")
 
 ;; (use-package elpy
 ;;   :ensure t
