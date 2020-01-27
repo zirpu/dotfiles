@@ -5,8 +5,8 @@
 
 
 revert(){
-    xset dpms 0 0 0
-    xset s off -dpms
+    xset dpms 300 400 600
+    xset s +dpms
     xinput --set-prop $mouse "Device Enabled" "1"
 }
 
