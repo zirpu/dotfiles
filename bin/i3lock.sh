@@ -13,7 +13,7 @@ revert(){
 trap revert HUP INT TERM
 
 xinput --set-prop $mouse "Device Enabled" "0"
-i3lock -t -f -n
+i3lock -t -f -n -c 0f0f0f
 revert
 
 
