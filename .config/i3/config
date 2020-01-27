@@ -168,6 +168,10 @@ bindsym $mod+r mode "resize"
 #bindsym F12 exec /home/allan/bin/i3lock.sh
 bindsym Pause exec /home/allan/bin/i3lock.sh
 
+# autolock.
+exec_always xss-lock -- ~/bin/i3lock.sh
+
+
 # volume control
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
