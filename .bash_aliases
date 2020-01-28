@@ -33,6 +33,6 @@ if [ -e $HOME/misc/.bash_aliases ]; then
     source $HOME/misc/.bash_aliases
 fi
 
-# setup ssh-agent
-alias ssh-setup='ssh-agent -k; eval $(ssh-agent| grep -v ^echo| tee $HOME/.ssh/.kc); unalias ssh-setup; ssh-add'
+# setup ssh-agent, with 20min ident life-time for opsec.
+alias ssh-setup='ssh-agent -k; eval $(ssh-agent -t 1200| grep -v ^echo| tee $HOME/.ssh/.kc); unalias ssh-setup; ssh-add'
 
