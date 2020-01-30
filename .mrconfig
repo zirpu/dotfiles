@@ -1,6 +1,0 @@
-
-[.bash_it]
-checkout = git clone -b zirpu 'https://github.com/zirpu/bash-it.git' '.bash_it'
-
-# read-write.
-#checkout = git clone 'git@github.com:zirpu/bash-it.git' '.bash_it'
