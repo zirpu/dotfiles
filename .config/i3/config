@@ -167,6 +167,7 @@ bindsym $mod+r mode "resize"
 #bindsym $mod+l exec /home/allan/bin/i3lock.sh
 #bindsym F12 exec /home/allan/bin/i3lock.sh
 bindsym Pause exec /home/allan/bin/i3lock.sh
+bindsym Insert exec /home/allan/bin/i3lock.sh
 
 # autolock.
 exec_always xss-lock -- ~/bin/i3lock.sh
