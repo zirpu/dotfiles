@@ -28,9 +28,12 @@ alias scr='cat > /dev/null'
 alias gst='git status'
 alias gba='git branch -a'
 
+# stop using the myrepos tool, use git submodule instead.
+alias mr='echo Use git submodule instead && false'
+
 # misc
-if [ -e $HOME/misc/.bash_aliases ]; then
-    source $HOME/misc/.bash_aliases
+if [ -e $HOME/projects/zirpu/misc/.bash_aliases ]; then
+    source $HOME/projects/zirpu/misc/.bash_aliases
 fi
 
 # setup ssh-agent, with 20min ident life-time for opsec.
