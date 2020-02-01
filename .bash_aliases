@@ -25,7 +25,8 @@ alias see='cat -v -e -t'
 alias scr='cat > /dev/null'
 
 # git
-alias gst='git status'
+alias gst='git status -uno'
+alias gstu='git status'
 alias gba='git branch -a'
 
 # stop using the myrepos tool, use git submodule instead.
