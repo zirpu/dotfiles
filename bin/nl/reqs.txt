@@ -1,0 +1,5 @@
+ansible
+ipython
+tmuxp
+awscli
+b2
