@@ -8,7 +8,7 @@
 
 (defun allan-goto-gtd ()
   (interactive)
-  (find-file "~/org/GTD.org"))
+  (find-file "~/projects/zirpu/org.git/GTD.org"))
 (define-key global-map "\C-c\C-g" 'allan-goto-gtd)
 
 
@@ -23,7 +23,7 @@
 ;(setq org-startup-folded 'content)
 (setq org-archive-location ".archives/%s_archive::")
 
-(setq org-agenda-files '("~/org/GTD.org"))
+(setq org-agenda-files '("~/projects/zirpu/org.git/GTD.org"))
 
 ; archive files to be auto saved.
 (defun allan-save-archives ()
