@@ -28,9 +28,10 @@ alias scr='cat > /dev/null'
 alias gst='git status -uno'
 alias gstu='git status'
 alias gba='git branch -a'
+alias gsm='git submodule'
 
 # stop using the myrepos tool, use git submodule instead.
-alias mr='echo Use git submodule instead && false'
+alias mr='echo "Use gsm (git submodule) instead." && false'
 
 # misc
 if [ -e $HOME/projects/zirpu/misc/.bash_aliases ]; then
