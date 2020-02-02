@@ -6,6 +6,6 @@ windows:
   - start_directory: /home/allan/projects/zirpu
     window_name: kata
 
-  - start_directory: /home/allan/org
+  - start_directory: /home/allan/projects/zirpu/org.git
     window_name: org
     window_index: 9
