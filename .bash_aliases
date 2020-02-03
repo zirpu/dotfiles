@@ -39,5 +39,5 @@ if [ -e $HOME/projects/zirpu/misc/.bash_aliases ]; then
 fi
 
 # setup ssh-agent, with 20min ident life-time for opsec.
-alias ssh-setup='ssh-agent -k; eval $(ssh-agent -t 1200| grep -v ^echo| tee $HOME/.ssh/.kc); unalias ssh-setup; ssh-add'
+alias ssh-setup='ssh-agent -k; eval $(ssh-agent -t 15m | grep -v ^echo| tee $HOME/.ssh/.kc); unalias ssh-setup; ssh-add'
 
