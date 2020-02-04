@@ -1,4 +1,7 @@
 ansible
+yamllint
+ansible-lint
+molecule
 ipython
 tmuxp
 awscli
