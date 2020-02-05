@@ -1,0 +1,1 @@
+complete -C /home/allan/.local/bin/packer packer

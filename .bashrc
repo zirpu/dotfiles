@@ -116,3 +116,5 @@ export SCM_CHECK=true
 source ${BASH_IT}/bash_it.sh
 
 #consider the platypus.
+
+# complete -C /home/allan/.local/bin/packer packer
