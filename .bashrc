@@ -76,6 +76,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 # common default paths
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
 
+# Rust.
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # goal: only source .kc on tmux windows.
 if [ -e $HOME/.ssh/.kc ]; then
     if [ ! -z "$TMUX" ]; then
