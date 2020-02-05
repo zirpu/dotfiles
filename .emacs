@@ -72,7 +72,7 @@
  '(org-capture-templates
    (quote
     (("i" "Inbox" entry
-      (file+headline "~/org/GTD.org" "Inbox:")
+      (file+headline "~/projects/zirpu/org.git/GTD.org" "Inbox:")
       "* %?
   %i
 " :empty-lines-after 1))))
