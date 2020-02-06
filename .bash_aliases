@@ -29,6 +29,7 @@ alias gst='git status -uno'
 alias gstu='git status'
 alias gba='git branch -a'
 alias gsm='git submodule'
+alias grv='git remote -v'
 
 # stop using the myrepos tool, use git submodule instead.
 alias mr='echo "Use gsm (git submodule) instead." && false'
