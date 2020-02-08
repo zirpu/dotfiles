@@ -14,3 +14,5 @@
 ;;              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 (package-initialize)
+; need to have used package-install  elpy.
+(elpy-enable)
