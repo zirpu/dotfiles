@@ -14,12 +14,8 @@
 (load-library "allan-mh-stuff")
 (load-library "allan-elpa")
 (load-library "allan-magit")
+(load-library "allan-elpy")
 (load-library "fix-window")
-
-;; (use-package elpy
-;;   :ensure t
-;;   :init
-;;   (elpy-enable))
 
 ;; Visual feedback on selections
 (setq-default transient-mark-mode t)
