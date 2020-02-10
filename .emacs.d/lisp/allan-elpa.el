@@ -5,12 +5,11 @@
 
 
 (require 'package)
+
 (add-to-list 'package-archives
-;             '("melpa" . "http://melpa.org/packages/") t)
-             '("melpa-stable" . "https://stable.melpa.org/packages/"))
-
-;; (require 'package)
-;; (add-to-list 'package-archives
-;;              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-
-(package-initialize)
+	     '(
+;	       ("gnu" . "https://elpa.gnu.org/packages/")
+	       ("melpa" . "http://melpa.org/packages/")
+	       ("melpa-stable" . "https://stable.melpa.org/packages/")
+	       )
+	     t)

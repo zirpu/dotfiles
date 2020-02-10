@@ -78,7 +78,7 @@
     ((sequence "PROCESS" "NEXT" "TODO" "WAITING" "REVIEW" "DEFERRED" "CANCELED" "DONE"))))
  '(package-selected-packages
    (quote
-    (dockerfile-mode terraform-mode haskell-mode editorconfig toml-mode pipenv elpy cargo apache-mode browse-kill-ring csv-mode discover erlang folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
+    (use-package dockerfile-mode terraform-mode haskell-mode editorconfig toml-mode pipenv elpy cargo apache-mode browse-kill-ring csv-mode discover erlang folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
  '(python-indent-guess-indent-offset t)
  '(safe-local-variable-values
    (quote
