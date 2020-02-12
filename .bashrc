@@ -98,6 +98,15 @@ case $- in
     *) return;;
 esac
 
+JQ=$(command -v jq)
+DIST=$(command -v distro)
+
+if [ ! -z "${JQ}" -a ! -z "${DIST}" ]; then
+    t=$(${DIST} --json | ${JQ} -rc '.id, .version')
+    export DISTRO=$(echo $t | tr -d ' ')
+fi
+unset JQ DIST t
+
 # Path to the bash it configuration
 export BASH_IT="/home/allan/.bash_it"
 
