@@ -12,6 +12,7 @@
 .aptitude
 .aws
 .bash_history
+.bash_history.d
 .bash_it
 .bitmonero
 .cache
