@@ -26,6 +26,9 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# no root after this.
+[ $(id -u) = 0 ] && return
+
 # NMH
 if [ -d /usr/bin/mh ]; then
     export PATH=${PATH}:/usr/bin/mh
