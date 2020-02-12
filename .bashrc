@@ -3,10 +3,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# don't put duplicate lines in the history.
-export HISTCONTROL=ignoredups
-# ignore same sucessive entries.
-export HISTCONTROL=ignoreboth
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -71,7 +67,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 # # bin.
 [ -d $HOME/bin ] && PATH=$HOME/bin:$PATH
-# #[ -d $HOME/.bin ] && PATH=$HOME/.bin:$PATH
 
 [ -d $HOME/.local/bin ] && PATH=$HOME/.local/bin:$PATH
 
@@ -97,6 +92,18 @@ case $- in
   *i*) ;;
     *) return;;
 esac
+
+# ignore same sucessive entries and lines starting with space.
+export HISTCONTROL=ignoreboth
+
+# put history files in $HOME/.bash_history.d
+export HISTDIR=$HOME/.bash_history.d
+[ ! -d $HISTDIR ] && mkdir -p $HISTDIR
+if [ $(ls -1 $HISTDIR| wc -l) -gt 100 ]; then
+   echo HISTDIR getting full, squash it.
+fi
+export HISTSIZE=1000
+export HISTFILE=$HOME/.bash_history.d/philadelphia.$(tty | tr / _).$$
 
 JQ=$(command -v jq)
 DIST=$(command -v distro)
@@ -126,6 +133,4 @@ export SCM_CHECK=true
 # Load Bash It
 source ${BASH_IT}/bash_it.sh
 
-#consider the platypus.
-
-# complete -C /home/allan/.local/bin/packer packer
+##
