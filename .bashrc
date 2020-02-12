@@ -27,7 +27,10 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # no root after this.
-[ $(id -u) = 0 ] && return
+if [ $(id -u) = 0 ]; then
+    export HISTFILE=/root/.bash_history
+    return
+fi
 
 # NMH
 if [ -d /usr/bin/mh ]; then
