@@ -14,9 +14,17 @@ fi
 # Ubuntu 19.10, waiting for 20.04.
 if [ "$(lsb_release -is)" = "Ubuntu" ]; then
    sudo apt install python3-dev python3-pip python3-virtualenvwrapper tmux
-   pip3 install -r $HOME/bin/nl/reqs.txt
-    # useful, but system package causes pip to refuse.
-    pip3 install --user -U distro --force-reinstall
+   pip3 install --user -r $HOME/bin/nl/reqs.txt
+   # useful, but system package causes pip to refuse.
+   pip3 install --user -U distro --force-reinstall
+fi
+
+# Debian 10
+if [ "$(lsb_release -is)" = "Debian" ]; then
+   sudo apt install python3-dev python3-pip virtualenvwrapper tmux
+   pip3 install --user -r $HOME/bin/nl/reqs.txt
+   # useful, but system package causes pip to refuse.
+   pip3 install --user -U distro --force-reinstall
 fi
 
 
