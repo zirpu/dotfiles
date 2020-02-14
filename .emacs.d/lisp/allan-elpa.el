@@ -6,10 +6,13 @@
 
 (require 'package)
 
+; default:
+; ("gnu" . "https://elpa.gnu.org/packages/")
+
 (add-to-list 'package-archives
-	     '(
-;	       ("gnu" . "https://elpa.gnu.org/packages/")
-	       ("melpa" . "http://melpa.org/packages/")
-	       ("melpa-stable" . "https://stable.melpa.org/packages/")
-	       )
-	     t)
+	     '("melpa" . "http://melpa.org/packages/")
+	     )
+
+(add-to-list 'package-archives
+	     '("melpa-stable" . "https://stable.melpa.org/packages/")
+	     )
