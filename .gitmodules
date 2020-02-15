@@ -5,3 +5,4 @@
 [submodule "ansible"]
 	path = ansible
 	url = https://gitlab.com/zirpu/ansible-nomad.git
+	branch = master
