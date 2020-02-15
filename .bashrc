@@ -22,6 +22,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
@@ -29,6 +33,7 @@ fi
 # no root after this.
 if [ $(id -u) = 0 ]; then
     export HISTFILE=/root/.bash_history
+    export HOME=/root
     return
 fi
 
@@ -37,36 +42,6 @@ if [ -d /usr/bin/mh ]; then
     export PATH=${PATH}:/usr/bin/mh
 fi
 
-## functions
-snr(){
-    _host=$1; shift
-    tmux new-window -n $_host "ssh -X $_host  $*";
-}
-
-psg(){
-    ps -ewf |egrep -i "$1" | grep -v grep
-}
-
-psm(){
-    ps -ewf | sort | more
-}
-
-function gclone(){
-    # just the last part of the path.
-    a=$(basename $1)
-    git clone $1 $a
-    mr reg $a
-    #gsm $1 $a
-}
-
-function gclone2(){
-    # into user/whatever.git
-    a=$(basename $1)
-    b=$(dirname $1); b=$(basename $b)
-    git clone $1 $b/$a
-    mr reg $b/$a
-    #gsm add $1 $b/$a
-}
 
 [ -e /etc/bash_completion.d/virtualenvwrapper ] && . /etc/bash_completion.d/virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
