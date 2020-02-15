@@ -9,3 +9,9 @@ more $HOME/tmp/rust-install.sh
 bash $HOME/tmp/rust-install.sh
 
 
+PATH=$HOME/.cargo/bin
+
+rustup toolchain add nightly
+
+rustup update
+
