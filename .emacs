@@ -61,6 +61,9 @@
  '(current-language-environment "UTF-8")
  '(default-input-method "rfc1345")
  '(dired-listing-switches "-l")
+ '(elpy-modules
+   (quote
+    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-folding elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(frame-background-mode nil)
  '(global-font-lock-mode t nil (font-lock))
  '(menu-bar-mode nil)
