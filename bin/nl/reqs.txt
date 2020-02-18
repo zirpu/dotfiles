@@ -6,3 +6,6 @@ ipython
 tmuxp
 awscli
 b2
+pipenv
+pipx
+cookiecutter
