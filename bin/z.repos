@@ -2,13 +2,14 @@
 
 import argparse
 import os
-import subprocess
+from subprocess import Popen, PIPE
 import sys
 import yaml
 
 
 def save_config(config):
-    open('repos.yaml', 'w').write(yaml.dump(config, explicit_start=True, explicit_end=True, indent=True))
+    open('repos.yaml', 'w').write(
+        yaml.dump(config, explicit_start=True, explicit_end=True, indent=True))
 
 
 def repos_list(args):
@@ -23,8 +24,8 @@ def repos_reg(args):
         return -1
 
     cmd = 'git remote get-url origin'
-    sp = subprocess.Popen(cmd, cwd=p, shell=True,
-                          stdout=subprocess.PIPE)
+    sp = Popen(cmd, cwd=p, shell=True,
+               stdout=PIPE)
     _out, _err = sp.communicate()
     url = _out.decode().strip()
     if sp.returncode != 0:
@@ -44,9 +45,8 @@ def repos_update(args):
     for p in _paths:
         if os.path.exists(p):
             cmd = 'git pull'.format(p)
-            sp = subprocess.Popen(cmd, shell=True,
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                                  cwd=p)
+            sp = Popen(cmd, shell=True, cwd=p)
+            # stdout=PIPE, stderr=PIPE
             _out, _err = sp.communicate()
             if sp.returncode != 0:
                 print(_out, _err)
@@ -54,8 +54,7 @@ def repos_update(args):
             print("{} updated.".format(p))
         else:
             cmd = 'git clone {} {}'.format(args.config[p], p)
-            sp = subprocess.Popen(cmd, shell=True,
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            sp = Popen(cmd, shell=True)
             _out, _err = sp.communicate()
             if sp.returncode != 0:
                 print(_out, _err)
@@ -71,7 +70,8 @@ def repos_remove(args):
 
 
 def main(config):
-    parser = argparse.ArgumentParser(description='minimal replacement of myrepos mr utility.')
+    parser = argparse.ArgumentParser(
+        description='minimal replacement of myrepos mr utility.')
     parser.add_argument("--debug", default=True)
     parser.add_argument("--dryrun", default=True)
 
