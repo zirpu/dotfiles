@@ -17,8 +17,8 @@ function gclone(){
     # just the last part of the path.
     a=$(basename $1)
     git clone $1 $a
-    mr reg $a
-    #gsm $1 $a
+    z.repos reg $a
+
 }
 
 function gclone2(){
@@ -26,6 +26,5 @@ function gclone2(){
     a=$(basename $1)
     b=$(dirname $1); b=$(basename $b)
     git clone $1 $b/$a
-    mr reg $b/$a
-    #gsm add $1 $b/$a
+    z.repos reg $b/$a
 }
