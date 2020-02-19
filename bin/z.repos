@@ -103,6 +103,8 @@ def main(config):
 if __name__ == '__main__':
     try:
         config = yaml.load(open('repos.yaml'), Loader=yaml.SafeLoader)
+        if config is None or len(config) == 0:
+            sys.exit('repos.yaml is empty.  boo hoo.')
     except Exception as e:
         sys.exit(e)  # lazy.
 
