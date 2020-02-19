@@ -14,7 +14,10 @@ def save_config(config):
 
 def repos_list(args):
     for r in args.config:
-        print(r)
+        missing = ''
+        if not os.path.isdir(r):
+            missing = " MISSING"
+        print("{}{}".format(r, missing))
 
 
 def repos_reg(args):
