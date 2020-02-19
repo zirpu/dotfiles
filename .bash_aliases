@@ -31,9 +31,8 @@ alias gba='git branch -a'
 alias gsm='git submodule'
 alias grv='git remote -v'
 
-# stop using the myrepos tool, use git submodule instead.
-# alias mr='echo "Use gsm (git submodule) instead." && false'
-## gah. until i write my own.
+# stop using the myrepos tool 'mr'.
+alias mr='echo stop using the mr command.'
 
 # misc
 if [ -e $HOME/projects/zirpu/misc/.bash_aliases ]; then
