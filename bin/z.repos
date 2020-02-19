@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+import sys
+import yaml
+
+
+def save_config(config):
+    open('repos.yaml', 'w').write(yaml.dump(config, explicit_start=True, explicit_end=True, indent=True))
+
+
+def repos_list(args):
+    for r in args.config:
+        print(r)
+
+
+def repos_reg(args):
+    p = args.path
+    if p in args.config:
+        print('{} is already registered.'.format(p))
+        return -1
+
+    cmd = 'git remote get-url origin'
+    sp = subprocess.Popen(cmd, cwd=p, shell=True,
+                          stdout=subprocess.PIPE)
+    _out, _err = sp.communicate()
+    url = _out.decode().strip()
+    if sp.returncode != 0:
+        print(_err)
+        return -1
+    args.config[p] = url
+    save_config(args.config)
+
+
+def repos_update(args):
+    _paths = []
+    if args.path is not None:
+        _paths.append(args.path)
+    else:
+        _paths = args.config.keys()
+
+    for p in _paths:
+        if os.path.exists(p):
+            cmd = 'git pull'.format(p)
+            sp = subprocess.Popen(cmd, shell=True,
+                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                  cwd=p)
+            _out, _err = sp.communicate()
+            if sp.returncode != 0:
+                print(_out, _err)
+                return -1
+            print("{} updated.".format(p))
+        else:
+            cmd = 'git clone {} {}'.format(args.config[p], p)
+            sp = subprocess.Popen(cmd, shell=True,
+                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            _out, _err = sp.communicate()
+            if sp.returncode != 0:
+                print(_out, _err)
+                return -1
+            print("{} cloned to {}".format(args.config[p], p))
+
+
+def repos_remove(args):
+    p = args.path
+    if p in args.config:
+        args.config.pop(p)
+        save_config(args.config)
+
+
+def main(config):
+    parser = argparse.ArgumentParser(description='minimal replacement of myrepos mr utility.')
+    parser.add_argument("--debug", default=True)
+    parser.add_argument("--dryrun", default=True)
+
+    subparsers = parser.add_subparsers()
+    _list = subparsers.add_parser('list')
+    _list.set_defaults(func=repos_list)
+
+    _reg = subparsers.add_parser('reg')
+    _reg.add_argument('path')
+    _reg.set_defaults(func=repos_reg)
+
+    _update = subparsers.add_parser('update')
+    _update.add_argument('path', default=None, nargs='?')
+    _update.set_defaults(func=repos_update)
+
+    _remove = subparsers.add_parser('remove')
+    _remove.add_argument('path')
+    _remove.set_defaults(func=repos_remove)
+
+    args = parser.parse_args()
+    args.config = config
+
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_usage()
+
+
+if __name__ == '__main__':
+    try:
+        config = yaml.load(open('repos.yaml'), Loader=yaml.SafeLoader)
+    except Exception as e:
+        sys.exit(e)  # lazy.
+
+    main(config)
+    sys.exit(0)
