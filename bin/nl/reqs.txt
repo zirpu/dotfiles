@@ -1,16 +1,1 @@
-ansible
-ansible-lint
-awscli
-b2
-black
-cookiecutter
-elpy
-ipython
-isort
-molecule
-pipenv
 pipx
-pre-commit
-tmuxp
-yamllint
-zirpu-utils
