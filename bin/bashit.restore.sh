@@ -19,8 +19,8 @@ do
     bash-it enable plugin $p
 done
 
-for c in awscli bash-it consul docker git go kubectl \
-		makefile packer pip pip3 pipenv ssh system terraform \
+for c in awscli bash-it consul docker git go \
+		makefile packer pip3 pipenv ssh system terraform \
 		tmux vagrant vault
 do
     bash-it enable completion $c
