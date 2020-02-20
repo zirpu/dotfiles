@@ -14,6 +14,7 @@ pipenv
 pre-commit
 pycodestyle
 pytest
+shell-functools
 tmuxp
 tox
 yamllint
