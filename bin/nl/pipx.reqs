@@ -12,8 +12,8 @@ isort
 molecule
 pipenv
 pre-commit
+pycodestyle
 pytest
 tmuxp
 tox
 yamllint
-zirpu-utils
