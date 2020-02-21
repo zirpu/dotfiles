@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=$HOME/.local/bin:$PATH
+
 # Ubuntu 19.10, waiting for 20.04.
 if [ "$(lsb_release -is)" = "Ubuntu" ]; then
     sudo apt install python3-dev \
