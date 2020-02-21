@@ -16,7 +16,7 @@ if [ "$(lsb_release -is)" = "Ubuntu" ]; then
    hash -r
    for p in $(cat $HOME/bin/nl/pipx.reqs)
    do
-       pipx install $p
+       pipx install --system-site-packages $p
    done
 
 fi
@@ -34,7 +34,7 @@ if [ "$(lsb_release -is)" = "Debian" ]; then
    hash -r
    for p in $(cat $HOME/bin/nl/pipx.reqs)
    do
-       pipx install $p
+       pipx install --system-site-packages $p
    done
 
 fi
