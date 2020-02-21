@@ -27,7 +27,7 @@ if [ "$(lsb_release -is)" = "Debian" ]; then
 	 python3-venv python3-pip virtualenvwrapper \
 	 tmux jq \
 	 git git-el \
-	 emacs-common-non-dfsg  elpa-elpy
+	 elpa-elpy
    pip3 install --user -r $HOME/bin/nl/reqs.txt
    # useful, but system package causes pip to refuse.
    pip3 install --user -U distro --force-reinstall
