@@ -13,6 +13,7 @@ if [ "$(lsb_release -is)" = "Ubuntu" ]; then
    pip3 install --user -r $HOME/bin/nl/reqs.txt
    # useful, but system package causes pip to refuse.
    pip3 install --user -U distro --force-reinstall
+   hash -r
    for p in $(cat $HOME/bin/nl/pipx.reqs)
    do
        pipx install $p
@@ -30,6 +31,12 @@ if [ "$(lsb_release -is)" = "Debian" ]; then
    pip3 install --user -r $HOME/bin/nl/reqs.txt
    # useful, but system package causes pip to refuse.
    pip3 install --user -U distro --force-reinstall
+   hash -r
+   for p in $(cat $HOME/bin/nl/pipx.reqs)
+   do
+       pipx install $p
+   done
+
 fi
 
 exit 0;
