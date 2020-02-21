@@ -72,9 +72,6 @@ Music
 Pictures
 Videos
 VirtualBox VMs
-bin/terraform
-bin/tmuxp
-bin/vault
 bin/vendetta
 go
 mail
