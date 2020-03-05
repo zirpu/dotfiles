@@ -1,6 +1,16 @@
 #!/bin/bash
 
+set -e  # Fail early, fail fast.
+
 export PATH=$HOME/.local/bin:$PATH
+
+# Create branch for this host/node.
+branch=$(git branch|awk ' {print $1}')
+if [ "${branch}" = "master" ]; then
+    nb=$(hostname -s)
+    git checkout -b ${nb}
+    git push -u origin ${nb}
+fi
 
 # Ubuntu 19.10, waiting for 20.04.
 if [ "$(lsb_release -is)" = "Ubuntu" ]; then
