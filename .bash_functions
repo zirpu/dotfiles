@@ -1,4 +1,4 @@
-
+## -*- mode: shell-script -*-
 ## functions
 snr(){
     _host=$1; shift
@@ -27,4 +27,12 @@ function gclone2(){
     b=$(dirname $1); b=$(basename $b)
     git clone $1 $b/$a
     z.repos reg $b/$a
+}
+
+# clear history
+function clear_history(){
+    hs=$HISTSIZE
+    unset HISTSIZE
+    export HISTSIZE=0
+    export HISTSIZE=$hs
 }
