@@ -4,7 +4,7 @@
 
 
 
-devs=$(grep : /proc/net/dev |grep -v lo: | awk -F: ' {print $1}')
+devs=$(grep : /proc/net/dev | egrep -v '(lo:|virbr.*:|docker.*:)' | awk -F: ' {print $1}')
 #devs=$(grep : /proc/net/dev |grep -v lo: |grep '^e' | awk -F: ' {print $1}')
 
 c=3
