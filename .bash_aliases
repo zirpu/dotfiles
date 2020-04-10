@@ -41,3 +41,6 @@ fi
 
 # setup ssh-agent, with 15m ident life-time for opsec.  bah!
 #alias ssh-setup='ssh-agent -k; eval $(ssh-agent -t 15m | grep -v ^echo| tee $HOME/.ssh/.kc); unalias ssh-setup; ssh-add'
+
+alias box.proxy='ssh -v -R 0:localhost:10001 box.zirpu.org'
+
