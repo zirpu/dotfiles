@@ -2,7 +2,3 @@
 	path = .bash_it
 	url = https://github.com/zirpu/bash-it.git
 	branch = zirpu
-[submodule "ansible"]
-	path = ansible
-	url = https://gitlab.com/zirpu/ansible-nomad.git
-	branch = master
