@@ -80,7 +80,7 @@ export HISTCONTROL=ignoreboth
 # put history files in $HOME/.bash_history.d
 export HISTDIR=$HOME/.bash_history.d
 [ ! -d $HISTDIR ] && mkdir -p $HISTDIR
-if [ $(ls -1 $HISTDIR| wc -l) -gt 100 ]; then
+if [ $(ls -1 $HISTDIR| wc -l) -gt 10000 ]; then
    echo HISTDIR getting full, squash it.
 fi
 export HISTSIZE=1000
