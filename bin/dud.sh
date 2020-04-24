@@ -1,4 +1,4 @@
 #!/bin/bash
 
-du -shc .[^\.]* *
+du -shc .[^\.]* * | sort -h
 
