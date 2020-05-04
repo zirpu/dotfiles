@@ -7,7 +7,6 @@ cookiecutter
 coverage
 elpy
 flake8
-ipython
 isort
 molecule
 pipenv
