@@ -54,6 +54,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 # common default paths
 PATH=$PATH:/sbin:/usr/sbin:/usr/local/go/bin
 
+# Golang.
+export PATH="$HOME/go/bin:$PATH"
+
 # Rust.
 export PATH="$HOME/.cargo/bin:$PATH"
 
