@@ -64,10 +64,12 @@
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-folding elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
+ '(elpy-rpc-python-command "python3")
  '(frame-background-mode nil)
  '(global-font-lock-mode t nil (font-lock))
  '(menu-bar-mode nil)
  '(mh-decode-mime-flag t)
+ '(org-agenda-files (quote ("~/projects/zirpu/org.git/GTD.org")))
  '(org-capture-templates
    (quote
     (("i" "Inbox" entry
