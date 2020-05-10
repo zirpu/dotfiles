@@ -76,11 +76,15 @@
       (file+headline "~/projects/zirpu/org.git/GTD.org" "Inbox:")
       "* %?
   %i
-" :empty-lines-after 1))))
+" :empty-lines-after 1)
+     ("n" "Next Action" entry
+      (file+headline "~/projects/zirpu/org.git/GTD.org" "Next Actions:")
+      "* %?
+  %i"))))
  '(org-catch-invisible-edits (quote show-and-error))
  '(org-todo-keywords
    (quote
-    ((sequence "PROCESS" "NEXT" "TODO" "WAITING" "REVIEW" "DEFERRED" "CANCELED" "DONE"))))
+    ((sequence "TODO" "NEXT" "WAITING" "|" "DONE" "WAITING"))))
  '(package-selected-packages
    (quote
     (use-package dockerfile-mode terraform-mode haskell-mode editorconfig toml-mode pipenv elpy cargo apache-mode browse-kill-ring csv-mode discover erlang folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
