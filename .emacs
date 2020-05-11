@@ -80,7 +80,12 @@
      ("n" "Next Action" entry
       (file+headline "~/projects/zirpu/org.git/GTD.org" "Next Actions:")
       "* %?
-  %i"))))
+  %i")
+     ("l" "Log activities,,," entry
+      (file+headline "~/projects/zirpu/org.git/GTD.org" "Log:")
+      "* %?
+ %U
+ %i"))))
  '(org-catch-invisible-edits (quote show-and-error))
  '(org-todo-keywords
    (quote
