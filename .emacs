@@ -82,7 +82,7 @@
       "* %?
   %i")
      ("l" "Log activities,,," entry
-      (file+headline "~/projects/zirpu/org.git/GTD.org" "Log:")
+      (file+olp+datetree "~/org/GTD.org" "Log:")
       "* %?
  %U
  %i"))))
