@@ -92,7 +92,7 @@
     ((sequence "TODO" "NEXT" "WAITING" "|" "DONE" "WAITING"))))
  '(package-selected-packages
    (quote
-    (use-package dockerfile-mode terraform-mode haskell-mode editorconfig toml-mode pipenv elpy cargo apache-mode browse-kill-ring csv-mode discover erlang folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
+    (org-random-todo use-package dockerfile-mode terraform-mode editorconfig toml-mode pipenv elpy cargo browse-kill-ring csv-mode discover folding go-mode graphviz-dot-mode hcl-mode initsplit magit markdown-mode python-info python-pytest python-test pyvenv rust-mode session yaml-mode)))
  '(python-indent-guess-indent-offset t)
  '(safe-local-variable-values
    (quote
