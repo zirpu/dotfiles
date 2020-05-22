@@ -1,3 +1,6 @@
 ipython
 nikola
 pipx
+tmuxp
+zirpu-utils
+
