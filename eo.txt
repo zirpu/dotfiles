@@ -23,3 +23,17 @@ EĤOŜANĜO ĈIUĴAŬDE
 
 ¿    bf           &?I
 ¡    a1           &!I
+
+
+#
+
+Desktop -> Labortabulo
+Downloads -> Elŝutujo
+Trash? -> Ŝablonujo
+       -> Forviŝujo
+       -> Rubujon
+Public -> Publikujo
+Documents -> Dokumentujo
+Music -> Muzikujo
+Pictures -> Bildujo
+Videos -> Videujo (?)
