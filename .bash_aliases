@@ -44,3 +44,8 @@ fi
 
 alias box.proxy='ssh -v -D 10001 box.zirpu.org'
 
+if [ -x $HOME/.cargo/bin/bat ]
+then
+  alias more=bat
+  alias less=bat
+fi
