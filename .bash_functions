@@ -38,8 +38,8 @@ function clear_history(){
 }
 
 function ssh-setup() {
-    ssh-agent -k
-    eval $(ssh-agent | grep -v ^echo | tee $HOME/.ssh/.kc; chmod 400 $HOME/.ssh/.kc)
+    #ssh-agent -k
+    eval $(ssh-agent) ## | grep -v ^echo | tee $HOME/.ssh/.kc; chmod 400 $HOME/.ssh/.kc)
     t=$(ls -1 $HOME/.ssh/*_* | grep _ | egrep -v 'known_hosts|authorized_keys' | egrep -v '.pub$')
     ssh-add $t
 }
