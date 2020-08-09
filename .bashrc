@@ -34,6 +34,7 @@ fi
 if [ $(id -u) = 0 ]; then
     export HISTFILE=/root/.bash_history
     export HOME=/root
+    export PATH=~allan/.cargo/bin:$PATH
     return
 fi
 
